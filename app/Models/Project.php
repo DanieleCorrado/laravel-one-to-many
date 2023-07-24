@@ -15,4 +15,8 @@ class Project extends Model
         "starting_date",
         "priority"
     ];
+
+    public function Type() {
+        return $this -> belongsTo(Type :: class);
+    }
 }
