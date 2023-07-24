@@ -13,10 +13,11 @@ class Project extends Model
         "title",
         "project_leader",
         "starting_date",
-        "priority"
+        "priority",
+        "type_id"
     ];
 
-    public function Type() {
+    public function type() {
         return $this -> belongsTo(Type :: class);
     }
 }

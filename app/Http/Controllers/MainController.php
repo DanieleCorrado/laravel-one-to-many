@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Project;
+use App\Models\Type;
 
 class MainController extends Controller
 {
@@ -18,7 +19,8 @@ class MainController extends Controller
     public function dashboard() {
 
         $projects = Project :: all();
+        $types = Type :: all();
 
-        return view('dashboard', compact('projects'));
+        return view('dashboard', compact('projects', 'types'));
     }
 }
